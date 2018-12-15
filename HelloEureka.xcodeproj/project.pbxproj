@@ -88,6 +88,7 @@
 		691C164E21C4D05E005DB90B /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C164D21C4D05E005DB90B /* DatePickerViewController.swift */; };
 		691C165021C4EEF7005DB90B /* HalfModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C164F21C4EEF7005DB90B /* HalfModalPresentationController.swift */; };
 		691C165421C50789005DB90B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 691C165321C50789005DB90B /* README.md */; };
+		691C165621C582D0005DB90B /* HelloEureka.png in Resources */ = {isa = PBXBuildFile; fileRef = 691C165521C582D0005DB90B /* HelloEureka.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +197,7 @@
 		691C164D21C4D05E005DB90B /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		691C164F21C4EEF7005DB90B /* HalfModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalPresentationController.swift; sourceTree = "<group>"; };
 		691C165321C50789005DB90B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		691C165521C582D0005DB90B /* HelloEureka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloEureka.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				691C158021C4A5AC005DB90B /* HelloEurekaUITests */,
 				691C155F21C4A5A5005DB90B /* Products */,
 				691C165321C50789005DB90B /* README.md */,
+				691C165521C582D0005DB90B /* HelloEureka.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -560,6 +563,7 @@
 				691C156C21C4A5AB005DB90B /* LaunchScreen.storyboard in Resources */,
 				691C156921C4A5AA005DB90B /* Assets.xcassets in Resources */,
 				691C164321C4C207005DB90B /* CustomSwitchCell.xib in Resources */,
+				691C165621C582D0005DB90B /* HelloEureka.png in Resources */,
 				691C165421C50789005DB90B /* README.md in Resources */,
 				691C15F821C4A707005DB90B /* Eureka.bundle in Resources */,
 				691C15E221C4A707005DB90B /* Assets.xcassets in Resources */,
