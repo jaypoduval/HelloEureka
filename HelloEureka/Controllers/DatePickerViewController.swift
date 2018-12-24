@@ -9,9 +9,13 @@
 import UIKit
 
 open class DatePickerViewController: FormViewController, TypedRowControllerType  {
+    public var datePickerMode: UIDatePicker.Mode = .date
+    public var titleText: String =  ""
+    public var detailText: String =  ""
+    private var selectedDate: Date?
     
     /// The row that pushed or presented this controller
-    public var row: RowOf<String>!
+    public var row: RowOf<Date>!
     
     /// A closure to be called when the controller disappears.
     public var onDismissCallback : ((UIViewController) -> ())?
@@ -19,21 +23,33 @@ open class DatePickerViewController: FormViewController, TypedRowControllerType 
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.selectedDate = row.value
+        
         form +++
-            
+  
             Section()
-            
-            <<< ButtonRow(){
-                $0.title = "Change Value from child view controller"
-                }
-                .onCellSelection { (cell, row) in
-                    self.row.value =  "Value Changed"
-                    self.onDismissCallback?(self)
+      
+            <<< CustomDatePickerRow() {
+                $0.cellProvider = CellProvider<CustomDatePickerCell>(nibName: "CustomDatePickerCell", bundle: Bundle.main)
+                $0.datePickerMode = self.datePickerMode
+                $0.value = row.value
+                $0.title = titleText
+                $0.detailText = detailText
+                $0.cell.cancelButton.addTarget(self, action: #selector(cancelButtonAction(_:)), for: .touchUpInside)
+                $0.cell.doneButton.addTarget(self, action: #selector(doneButtonAction(_:)), for: .touchUpInside)
+              }
+                .onChange {  row in
+                    self.selectedDate = row.value
         }
     }
+
+    @objc func cancelButtonAction(_ sender: AnyObject) {
+        self.onDismissCallback?(self)
+    }
     
-    @IBAction func cancelButtonTapped(sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
+    @objc func doneButtonAction(_ sender: AnyObject) {
+        self.row.value = selectedDate
+        self.onDismissCallback?(self)
     }
 }
 

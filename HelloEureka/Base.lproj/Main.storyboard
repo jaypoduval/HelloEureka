@@ -28,33 +28,6 @@
             </objects>
             <point key="canvasLocation" x="562" y="-692"/>
         </scene>
-        <!--Modal view-->
-        <scene sceneID="CnU-8R-mXT">
-            <objects>
-                <viewController title="Modal view" id="XSw-Ua-meh" customClass="DatePickerViewController" customModule="HelloEureka" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GG3-xC-sIw"/>
-                        <viewControllerLayoutGuide type="bottom" id="PDp-gM-dgs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uT4-T9-s2x">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Uqx-zo-eHM"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Modal view" id="M7M-Mm-c9o">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="iQW-cc-OHL"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="cRn-fO-i6i">
-                            <connections>
-                                <action selector="cancelButtonTappedWithSender:" destination="XSw-Ua-meh" id="Vfv-qV-aJL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4iX-We-ohT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2218" y="-699"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZOY-9E-JIG">
             <objects>
@@ -65,9 +38,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="XSw-Ua-meh" kind="relationship" relationship="rootViewController" id="oGZ-ql-RmA"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4MG-bj-ijl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
