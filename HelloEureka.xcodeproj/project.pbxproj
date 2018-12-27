@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6905A7ED21D4AC46009C3D88 /* TimeOfDaySelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905A7EC21D4AC46009C3D88 /* TimeOfDaySelectorRow.swift */; };
+		6905A7F221D4ADE6009C3D88 /* TimeOfDaySelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6905A7F121D4ADE6009C3D88 /* TimeOfDaySelectorCell.xib */; };
 		691C156221C4A5A5005DB90B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C156121C4A5A5005DB90B /* AppDelegate.swift */; };
 		691C156721C4A5A6005DB90B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691C156521C4A5A6005DB90B /* Main.storyboard */; };
 		691C156921C4A5AA005DB90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691C156821C4A5AA005DB90B /* Assets.xcassets */; };
@@ -109,6 +111,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6905A7EC21D4AC46009C3D88 /* TimeOfDaySelectorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDaySelectorRow.swift; sourceTree = "<group>"; };
+		6905A7F121D4ADE6009C3D88 /* TimeOfDaySelectorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeOfDaySelectorCell.xib; sourceTree = "<group>"; };
 		691C155E21C4A5A5005DB90B /* HelloEureka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloEureka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		691C156121C4A5A5005DB90B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		691C156621C4A5A6005DB90B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -225,6 +229,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6905A7EA21D4ABFE009C3D88 /* CustomModal */ = {
+			isa = PBXGroup;
+			children = (
+				698B1F3121D0AAFB00FEEEA1 /* CustomModalPresentationController.swift */,
+			);
+			path = CustomModal;
+			sourceTree = "<group>";
+		};
+		6905A7EE21D4AC4F009C3D88 /* TimeOfDaySelctorRow */ = {
+			isa = PBXGroup;
+			children = (
+				6905A7EC21D4AC46009C3D88 /* TimeOfDaySelectorRow.swift */,
+				6905A7F121D4ADE6009C3D88 /* TimeOfDaySelectorCell.xib */,
+			);
+			path = TimeOfDaySelctorRow;
+			sourceTree = "<group>";
+		};
 		691C155521C4A5A5005DB90B = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +444,8 @@
 		691C163521C4C207005DB90B /* CustomRow */ = {
 			isa = PBXGroup;
 			children = (
+				6905A7EE21D4AC4F009C3D88 /* TimeOfDaySelctorRow */,
+				6905A7EA21D4ABFE009C3D88 /* CustomModal */,
 				698B1F2821D041E200FEEEA1 /* CustomDatePickerRow */,
 				691C163721C4C207005DB90B /* CustomSelectRow */,
 			);
@@ -441,8 +464,6 @@
 			isa = PBXGroup;
 			children = (
 				691C164021C4C207005DB90B /* MainViewController.swift */,
-				691C164D21C4D05E005DB90B /* DatePickerViewController.swift */,
-				698B1F3121D0AAFB00FEEEA1 /* CustomModalPresentationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -452,6 +473,7 @@
 			children = (
 				698B1F2D21D0425200FEEEA1 /* CustomDatePickerCell.xib */,
 				698B1F2921D0420000FEEEA1 /* CustomDatePickerRow.swift */,
+				691C164D21C4D05E005DB90B /* DatePickerViewController.swift */,
 			);
 			path = CustomDatePickerRow;
 			sourceTree = "<group>";
@@ -562,6 +584,7 @@
 			files = (
 				691C156C21C4A5AB005DB90B /* LaunchScreen.storyboard in Resources */,
 				691C156921C4A5AA005DB90B /* Assets.xcassets in Resources */,
+				6905A7F221D4ADE6009C3D88 /* TimeOfDaySelectorCell.xib in Resources */,
 				691C165621C582D0005DB90B /* HelloEureka.png in Resources */,
 				691C165421C50789005DB90B /* README.md in Resources */,
 				691C15F821C4A707005DB90B /* Eureka.bundle in Resources */,
@@ -615,6 +638,7 @@
 				691C160121C4A707005DB90B /* DecimalFormatter.swift in Sources */,
 				691C161F21C4A707005DB90B /* RuleClosure.swift in Sources */,
 				691C161D21C4A707005DB90B /* TriplePickerInputRow.swift in Sources */,
+				6905A7ED21D4AC46009C3D88 /* TimeOfDaySelectorRow.swift in Sources */,
 				691C164E21C4D05E005DB90B /* DatePickerViewController.swift in Sources */,
 				691C15F221C4A707005DB90B /* Section.swift in Sources */,
 				691C160421C4A707005DB90B /* OptionsRow.swift in Sources */,

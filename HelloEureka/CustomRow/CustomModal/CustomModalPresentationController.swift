@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class CustomModalPresentationController : UIPresentationController {
+    
+    public static let modalViewHeight: CGFloat = 400.0
+    
     var overlayView: UIView!
     var tapGestureRecognizer: UITapGestureRecognizer!
     
@@ -19,7 +22,9 @@ class CustomModalPresentationController : UIPresentationController {
     }
     
     override var frameOfPresentedViewInContainerView: CGRect {
-        return CGRect(x: 0, y: containerView!.bounds.height / 2, width: containerView!.bounds.width, height: containerView!.bounds.height / 2)
+        let height = CustomModalPresentationController.modalViewHeight
+        let originX = containerView!.bounds.height - height
+        return CGRect(x: 0, y: originX, width: containerView!.bounds.width, height: height)
     }
     
     override func presentationTransitionWillBegin() {

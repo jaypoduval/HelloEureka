@@ -19,7 +19,7 @@ class MainViewController: FormViewController {
             
             <<< CustomSelectorRow() {
                 $0.title = "Date Picker"
-                $0.value = nil
+                $0.value = Date()
                 $0.titleText = "Date Picker"
                 $0.detailText = "Date Picker Detail"
                 $0.datePickerMode = .date
@@ -29,15 +29,16 @@ class MainViewController: FormViewController {
                     cell, row in
                     cell.detailTextLabel?.text = self.formattedDate(row.value, datePickerMode:.date)
             }
-
+            
             <<< CustomSelectorRow() {
                 $0.title  = "Time Picker"
                 $0.titleText = "Time Picker"
                 $0.detailText = "Time Picker Detail"
-                $0.value =  nil
+                $0.value =  Date()
                 $0.datePickerMode = .time
                 }.onChange { row in
                     row.updateCell()
+                    //valid
                 }.cellUpdate {
                     cell, row in
                     cell.detailTextLabel?.text = self.formattedDate(row.value, datePickerMode:.time)
@@ -47,20 +48,28 @@ class MainViewController: FormViewController {
                 $0.title  = "Date & Time Picker"
                 $0.titleText = "Date & Time Picker"
                 $0.detailText = "Date & Time  Picker Detail"
-                $0.value = nil
+                $0.value = Date()
                 $0.datePickerMode = .dateAndTime
                 }.onChange { row in
                     row.updateCell()
                 }.cellUpdate {
                     cell, row in
                     cell.detailTextLabel?.text = self.formattedDate(row.value, datePickerMode:.dateAndTime)
+            }
+            
+            <<< TimeOfDaySelectorRow(){
+                $0.value = Date()
+                $0.title  = "Time of Day"
+                $0.titleText = "Time Picker"
+                $0.detailText = "Time  Picker Detail"
+                
         }
     }
     
     func formattedDate(_ selectedDate: Date?, datePickerMode: UIDatePicker.Mode) -> String {
         
         guard let date = selectedDate else { return "" }
-    
+        
         let dateFormatter = DateFormatter()
         
         switch datePickerMode {
@@ -72,7 +81,7 @@ class MainViewController: FormViewController {
             dateFormatter.dateFormat = "yyyy-MM-dd"
         }
         let dateText = dateFormatter.string(from: date)
-       
+        
         return dateText
     }
 }

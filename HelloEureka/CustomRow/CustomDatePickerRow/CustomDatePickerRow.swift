@@ -41,6 +41,7 @@ open class CustomDatePickerCell: Cell<Date>, CellType {
     
     open override func setup() {
         super.setup()
+        
         selectionStyle = .none
         accessoryType = .none
         editingAccessoryType =  .none
@@ -48,9 +49,9 @@ open class CustomDatePickerCell: Cell<Date>, CellType {
         datePicker.datePickerMode = (row as? CustomDatePickerRowProtocol)?.datePickerMode ?? .date
         datePicker.addTarget(self, action: #selector(DatePickerCell.datePickerValueChanged(_:)), for: .valueChanged)
         self.cancelButton.layer.borderWidth = 1.0
-        self.cancelButton.layer.borderColor = UIColor.lightGray.cgColor
+        self.cancelButton.layer.borderColor = UIColor(red: 214.0/255.0, green: 214.0/255.0, blue: 214.0/255.0, alpha: 1.0).cgColor
         self.doneButton.layer.borderWidth = 1.0
-        self.doneButton.layer.borderColor = UIColor.lightGray.cgColor
+        self.doneButton.layer.borderColor = UIColor(red: 214.0/255.0, green: 214.0/255.0, blue: 214.0/255.0, alpha: 1.0).cgColor
         
         self.titleLabel.text = row.title ?? ""
         self.detailLabel.text = (row as? CustomDatePickerRowProtocol)?.detailText ?? ""

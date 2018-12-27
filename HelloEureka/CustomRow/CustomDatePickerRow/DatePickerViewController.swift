@@ -22,12 +22,19 @@ open class DatePickerViewController: FormViewController, TypedRowControllerType 
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+     
+        tableView.alwaysBounceVertical = false
+        tableView.isScrollEnabled = false
+        tableView.allowsSelection = false
         
         self.selectedDate = row.value
         
         form +++
   
-            Section()
+            Section() {
+                $0.header = HeaderFooterView<UIView>(HeaderFooterProvider.class)
+                $0.header?.height = { CGFloat.leastNormalMagnitude }
+            }
       
             <<< CustomDatePickerRow() {
                 $0.cellProvider = CellProvider<CustomDatePickerCell>(nibName: "CustomDatePickerCell", bundle: Bundle.main)
